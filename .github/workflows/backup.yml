@@ -1,4 +1,4 @@
-name: Backup Pipeline
+name: Backup Automation
 
 on:
   push:
@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
 
     - name: Install Azure CLI
       run: |
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-    - name: Run backup
+    - name: Run backup script
       env:
         AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
         AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
