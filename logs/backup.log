@@ -380,3 +380,8 @@ Backup started at 2026-06-09_18-20-01
 Backup successful: backup_2026-06-09_18-20-01.tar.gz
 Uploading to Azure Blob...
 Azure upload failed: backup_2026-06-09_18-20-01.tar.gz
+Backup started at 2026-06-10_07-13-18
+Backup successful: backup_2026-06-10_07-13-18.tar.gz
+Uploading to Azure Blob...
+Azure upload failed: backup_2026-06-10_07-13-18.tar.gz
+Deleted backups older than 90 days

@@ -53,3 +53,12 @@ if [ $? -eq 0 ]; then
 else
     echo "Backup failed at $DATE" >> "$LOG_FILE"
 fi
+# ======================
+# AUTO CLEANUP
+# ======================
+
+RETENTION_DAYS=90
+
+find "$BACKUP_DIR" -name "*.tar.gz" -type f -mtime +$RETENTION_DAYS -delete
+
+echo "Deleted backups older than $RETENTION_DAYS days" >> "$LOG_FILE"
