@@ -2,11 +2,17 @@
 
 # ======================
 # PATHS (Docker-safe)
-# ======================
-BASE_DIR=/app
-SOURCE_DIR=$BASE_DIR/data
-BACKUP_DIR=$BASE_DIR/backups
-LOG_FILE=$BASE_DIR/logs/backup.log
+# =================
+BASE_DIR=$(pwd)
+
+SOURCE_DIR="$BASE_DIR/data"
+BACKUP_DIR="$BASE_DIR/backups"
+LOG_DIR="$BASE_DIR/logs"
+LOG_FILE="$LOG_DIR/backup.log"
+
+mkdir -p "$SOURCE_DIR"
+mkdir -p "$BACKUP_DIR"
+mkdir -p "$LOG_DIR"
 
 mkdir -p "$SOURCE_DIR" "$BACKUP_DIR" "$BASE_DIR/logs"
 
