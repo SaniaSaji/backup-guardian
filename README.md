@@ -89,30 +89,35 @@ backup-guardian/
 - No alerts or notifications are triggered
 
 ---
-
 ## ♻️ Restore / Recovery
 
 To restore a backup:
-
-```bash
 mkdir restore-test
-
 tar -xzf backups/<backup-file>.tar.gz -C restore-test
 
 Check restored files:
-
 ls -R restore-test
+
 📊 Monitoring
 Prometheus collects system and backup metrics
-Grafana visualizes dashboards
+Grafana provides visual dashboards
 Runs using Docker Compose
-
 Start monitoring:
-
 cd monitoring
 docker-compose up -d
+
 ☁️ Azure Integration
 Backups are stored in Azure Blob Storage
 Provides secure offsite storage
 Supports disaster recovery
 Ensures scalable cloud backup system
+
+🎯 What This Project Demonstrates
+Linux system administration
+Bash scripting automation
+Docker containerization
+Azure cloud services
+Backup & recovery systems
+Monitoring & observability
+DevOps workflow understanding
+Git & GitHub usage
