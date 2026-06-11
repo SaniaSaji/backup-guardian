@@ -385,3 +385,20 @@ Backup successful: backup_2026-06-10_07-13-18.tar.gz
 Uploading to Azure Blob...
 Azure upload failed: backup_2026-06-10_07-13-18.tar.gz
 Deleted backups older than 90 days
+Backup started at 2026-06-11_06-42-30
+Backup successful: backup_2026-06-11_06-42-30.tar.gz
+Uploading to Azure Blob...
+Backup started at 2026-06-11_07-03-08
+Backup successful: backup_2026-06-11_07-03-08.tar.gz
+Uploading to Azure Blob...
+Azure upload failed: backup_2026-06-11_07-03-08.tar.gz
+Deleted backups older than 90 days
+Cleaning old Azure backups...
+Azure cleanup completed
+Backup started at 2026-06-11_07-05-01
+Backup successful: backup_2026-06-11_07-05-01.tar.gz
+Uploading to Azure Blob...
+Upload successful: backup_2026-06-11_07-05-01.tar.gz
+Deleted backups older than 90 days
+Cleaning old Azure backups...
+Azure cleanup completed

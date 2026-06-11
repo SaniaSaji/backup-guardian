@@ -62,3 +62,17 @@ RETENTION_DAYS=90
 find "$BACKUP_DIR" -name "*.tar.gz" -type f -mtime +$RETENTION_DAYS -delete
 
 echo "Deleted backups older than $RETENTION_DAYS days" >> "$LOG_FILE"
+# ======================
+# AZURE BLOB CLEANUP
+# ======================
+
+echo "Cleaning old Azure backups..." >> "$LOG_FILE"
+
+az storage blob delete-batch \
+  --account-name "$AZURE_STORAGE_ACCOUNT" \
+  --account-key "$AZURE_STORAGE_KEY" \
+  --source backups \
+  --pattern "backup_*.tar.gz" \
+  --if-unmodified-since "$(date -u -d '90 days ago' '+%Y-%m-%dT%H:%MZ')"
+
+echo "Azure cleanup completed" >> "$LOG_FILE"
