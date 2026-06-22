@@ -62,15 +62,24 @@ Monitoring (Prometheus + Grafana)
 
 backup-guardian/
 │
-├── data/
+├── data/    
+
 ├── backups/
+
 ├── logs/
+
 ├── monitoring/
+
 │ └── docker-compose.yml
+
 ├── scripts/
+
 │ └── backup.sh
+
 ├── Dockerfile
+
 └── README.md
+
 
 
 ---
@@ -124,11 +133,11 @@ Ensures scalable cloud backup system
 
 ## 🎯 What This Project Demonstrates
 
-Linux system administration
-Bash scripting automation
-Docker containerization
-Azure cloud services
-Backup & recovery systems
-Monitoring & observability
-DevOps workflow understanding
-Git & GitHub usage
+*Linux system administration
+*Bash scripting automation
+*Docker containerization
+*Azure cloud services
+*Backup & recovery systems
+*Monitoring & observability
+*DevOps workflow understanding
+*Git & GitHub usage
